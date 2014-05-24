@@ -1,0 +1,595 @@
+* {
+  font-family: ubuntu,tahoma,verdana,arial,helvetica,sans-serif !important;
+}
+
+.nahledy {
+	background: white;
+	font-size: 11px;
+	/*font: 11px tahoma,verdana,arial,helvetica,sans-serif;*/
+}
+.nahledy .thumb{
+	background: #dddddd;
+	padding: 3px;
+	text-align: center;
+}
+.nahledy .thumb-wrap{
+	float: left;
+	margin: 3px;
+	margin-right: 0;
+	padding: 4px;
+	cursor: pointer;
+}
+.foto-win .nahledy .thumb-wrap{
+	float: none;
+	text-align: center;
+}
+.nahledy .thumb-wrap span{
+	display: block;
+	overflow: hidden;
+	text-align: center;
+}
+
+.nahledy .x-view-over{
+    border:1px solid #dddddd;
+    background: #efefef url('ext-3.4.0/resources/images/default/grid/row-over.gif') repeat-x left top;
+    padding: 3px;
+}
+
+.nahledy .x-view-selected{
+	background: #eff5fb url(images/fy-selected.gif) right bottom;
+	border:1px solid #D4E4C8;
+	padding: 3px;
+}
+.nahledy .x-view-selected .thumb{
+	background:transparent;
+}
+
+.nahledy .loading-indicator {
+	font-size:11px;
+	background-image:url('ext-3.4.0/resources/images/default/grid/loading.gif');
+	background-repeat: no-repeat;
+	background-position: left;
+	padding-left:20px;
+	margin:10px;
+}
+
+#foto-optim, .fotka {
+  cursor: url(images/zoom_in_plus.png), pointer;
+}
+
+.detail {
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px;
+}
+
+.foto-taxon-popis p {
+  margin-bottom: 5px;
+}
+
+.foto-taxon-popis strong {
+  font-weight: bold;
+}
+
+.foto-taxon-popis .nazev2 {
+  font-size: 12px !important;
+  font-weight: bold;
+}
+
+.foto-taxon-popis .foto-autor {
+    margin-top: 10px;
+    color: gray;
+}
+.taxon-nazev {
+  font-size: 15px; padding-top: 5px; padding-bottom: 5px;
+}
+
+.taxon-nazev .cesky {
+   font-weight: bold;
+}
+
+.latinsky {
+  font-style: italic;
+}
+
+.nolat {
+  font-style: normal;
+}
+
+.icon-plodina {
+  background-image: url(images/plodina.png) !important;
+}
+.icon-plodiny {
+  background-image: url(images/plodina.png) !important;
+}
+
+.zahlavi {
+  height: 106px; 
+  background-image: url('images/2000x106krisek.jpg');
+  color: #96C32C;
+  /*background-color:#DFF6E8;*/
+  background-color: #DCDCDC;
+}
+
+.zahl-obr1 {
+  background-image: url('images/2000x106bellis.jpg');
+}
+.zahl-obr2 {
+  background-image: url('images/2000x106euphorbia.jpg');
+}
+.zahl-obr3 {
+  background-image: url('images/2000x106krisek.jpg');
+}
+.zahl-obr4 {
+  background-image: url('images/2000x106mandel.jpg');
+}
+.zahl-obr5 {
+  background-image: url('images/2000x106nicandra.jpg');
+}
+.zahl-obr6 {
+  background-image: url('images/2000x106nosatci.jpg');
+}
+.zahl-obr7 {
+  background-image: url('images/2000x106pulmonaria.jpg');
+}
+.zahl-obr8 {
+  background-image: url('images/2000x106thlaspi.jpg');
+}
+.zahl-obr9 {
+  background-image: url('images/2000x106thlaspiA.jpg');
+}
+.zahl-obr10 {
+  background-image: url('images/2000x106trasnenka.jpg');
+}
+
+.zahlavi table, .fytoportal-menu button {
+  color: #96C32C;
+}
+
+.srslogo {
+  width: 82px;
+}
+
+.srslogo img {
+  width: 72px; height: 96px; margin: 3px 5px;
+}
+
+.ukzuzlogo {
+  width: 96px;
+}
+
+.ukzuzlogo img {
+  width: 86px; height: 96px; margin: 3px 5px;
+}
+
+.navigace {
+  text-align: right; padding-right: 5px;
+}
+
+.nadpis {
+  height: 42px; font-size: 28px; padding-left: 5px;
+}
+
+#path-info {
+  font-size: 12px; height: 30px; vertical-align: top; padding-left: 6px;
+}
+
+.userInfo {
+  text-align: right; vertical-align: bottom; padding: 5px;
+}
+
+.userInfo a {
+   color: #96C32C;
+}
+
+.kapitola .obsah {
+  font-size: 14px !important;
+  padding-bottom: 10px !important;
+}
+
+.Apple-tab-span {
+  margin-left: 25px;
+  white-space: normal !important;
+}
+
+.kapitola .obsah p.separator::before {
+	content: "";
+	margin-left: 25px;
+}
+
+.kapitola .obsah p.separator:last-child {
+	font-style: italic;
+}
+
+.kapitola .obsah ul, .kapitola .obsah ol {
+	margin: 0px;
+	padding: 0px 0px 5px 25px;
+}
+
+.kapitola .obsah ul li {
+  list-style: disc outside none;
+}
+
+.kapitola .obsah ol li {
+  list-style: decimal outside none;
+}
+
+.foto-taxon-popis, .foto-taxon-popis .obsah {
+    font-size: 12px !important;
+    /*font: normal 12px tahoma,verdana,arial,helvetica,sans-serif !important;*/
+}
+
+.kapitola .obsah br {
+  line-height: 4px;
+}
+
+.kapitola .semafor-por {
+  border: 1px solid #D6D6D6;
+}
+
+.semafor-por {
+  font-size: 14px !important;  
+  margin-bottom: 10px;
+}
+
+.taxon-popis {
+  padding-bottom: 10px;
+}
+
+.kapitola-taxon {
+  clear: both;
+}
+
+.kapitola-taxon p {
+  font-size: 14px;
+}
+
+.kapitola-taxon p strong {
+  font-weight: bold;
+}
+
+.kapitola-taxon .fotka {
+    float: right;
+    margin: 5px 5px 10px 10px;
+    overflow: hidden;
+}
+
+.kapitola .nazev1, .kapitola-taxon .cesky {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.kapitola-taxon .cesky {
+  background-color: #c7d8bb;
+  margin-top: 5px;
+}
+
+table.taxony .cesky {
+  background-color: transparent;
+}
+
+table.taxony {
+    border-collapse:collapse;
+    border: 1px solid gray;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+table.taxony, table.taxony .cesky, table.taxony p {
+    font-size: 13px !important;
+}
+
+table.taxony th, table.taxony td {
+    vertical-align: top;
+    padding: 2px;
+    border: 1px solid gray;
+}
+
+table.taxony th {
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+table.tab-text {
+    border-collapse:collapse;
+    border: 0px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    margin: 5px 0px;
+    font-size: 13px !important;
+}
+table.tab-text th, table.tab-text td {
+    vertical-align: top;
+    padding: 2px;
+    border: 0px;
+}
+table.tab-text th {
+    font-weight: bold;
+    /*white-space: nowrap;*/
+}
+table.tab-text .tab-head {
+  border-bottom: 1px solid gray;
+}
+table.tab-text .even {
+  background-color: #EFEFEF;
+}
+
+.kapitola .nazev2 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.kapitola .nazev3 {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.kapitola .nazev4 {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.kapitola .odkazy {
+  font-size: 12px;
+  padding-bottom: 3px;
+  background-color: #DCDCDC;
+}
+
+.kapitola .poradi {
+  /*font-weight: normal;*/
+}
+
+.kapitola-taxon .nazev1 {
+  font-size: 18px;
+}
+
+.kapitola-taxon .nazev2 {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.kapitola-taxon .nazev3 {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.kapitola-taxon .nazev4 {
+  font-size: 13px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.semafor-pouziti {
+  /*margin-left: 5px;
+  margin-right: 5px;*/
+  width: 100%;
+  background-color: rgb(240,240,240);
+}
+
+.semafor-pouziti .heading td {
+    border-bottom: 1px dotted;
+}
+
+.semafor-pouziti .heading td {
+    font-style: italic;
+}
+
+.semafor-pouziti td {
+    padding: 2px;
+    border-left: 1px dotted;
+}
+
+.semafor1 {
+  width: 6px;
+  background-color: green;
+  text-align: center;
+  font-weight: bold !important;
+  color: white;
+}
+
+.semafor2 {
+  width: 6px;
+  background-color: yellow;
+  text-align: center;
+  font-weight: bold !important;
+  color: black;
+}
+
+.semafor3 {
+  width: 6px;
+  background-color: red;
+  text-align: center;
+  font-weight: bold !important;
+  color: white;
+}
+
+.semafor-udaje {
+    font-size: 12px;
+    width: 100%;
+    /*background-color: rgb(240,240,240);*/
+}
+
+.semafor-udaje .heading td {
+    font-style: italic;
+}
+
+.semafor-udaje td {
+    padding: 2px;
+    border-left: 1px dotted;
+    border-bottom: 1px dotted;
+}
+
+.ior-taxon-nahled {
+    display: block;
+    overflow: hidden; 
+    margin: 5px 10px 10px 5px;
+}
+
+.ior-taxon-nahled div.fotka {
+    float: left;
+    margin-right: 10px;
+    overflow: hidden; 
+    text-align: center;
+    /*background-color: rgb(230,230,230);*/
+}
+
+.ior-vybrane-plodiny {
+  margin: 0px 10px 10px 5px;
+}
+
+.ior-vybrane-plodiny .label {
+  font-weight: bold;
+}
+
+.fytoportal-menu {
+  border-width: 0px;
+  background-image: none; 
+  background-color: transparent;
+}
+
+.fytoportal-menu .x-btn {
+  height: 27px;
+}
+
+.fytoportal-menu .x-btn-text {
+  font-size: 13px;
+  font-weight: bold;
+  /*font-family: tahoma,verdana,arial,helvetica;*/
+  /*font-style: italic;*/
+  /*ext-decoration: underline;*/
+}
+
+/* stisknute tlacitko bude vypadat jinak*/
+.fytoportal-menu .x-btn-pressed .x-btn-ml, .fytoportal-menu .x-btn-pressed .x-btn-mr, .fytoportal-menu .x-btn-pressed .x-btn-mc,
+  .fytoportal-menu .x-btn-pressed .x-btn-tl, .fytoportal-menu .x-btn-pressed .x-btn-tr, .fytoportal-menu .x-btn-pressed .x-btn-tc,
+  .fytoportal-menu .x-btn-pressed .x-btn-bl, .fytoportal-menu .x-btn-pressed .x-btn-br, .fytoportal-menu .x-btn-pressed .x-btn-bc {
+  background-image: none;
+}
+
+.fytoportal-menu .x-btn-pressed .x-btn-text {
+  font-weight: bold;
+  color: #96C32C;
+}
+
+
+.ior-page {
+  width: 900px;
+  padding: 5px; 
+  background-color: white;
+}
+
+/*
+.ior-info {
+  font-size: 120%;
+}
+
+.ior-info ul li {
+  list-style: disc inside none;
+  text-indent: 10px;
+}
+
+.ior-info p {
+  padding-top: 10px;
+}
+*/
+
+.mapovani-pouziti {
+  /*background-color: #dfe8f6;
+  background-color: #DFF6E8;*/
+  background-color: #f1f1f1;
+}
+
+.Xkapitola-editor .x-border-layout-ct {
+  background-color: #f1f1f1;
+}
+
+
+/* vychozi ikony do stromecku */
+.x-tree-node-expanded .x-tree-node-icon {
+	background-image:url(images/circle-pie2-green.png);
+}
+
+.x-tree-node-collapsed .x-tree-node-icon {
+	background-image:url(images/circle-green.png);
+}
+
+.x-tree-node-leaf .x-tree-node-icon {
+	/*background-image:url(images/circle-ring-green.png);*/
+	background-image:url(images/circle-ring-green.png);
+}
+
+/* ikony skupin ve stromecku metodik */
+.obecne-info[class~="x-tree-node-expanded"] .x-tree-node-icon{
+	/*background-image:url(images/book-open.png);*/
+	background-image:url(images/circle-pie2-brown.png);
+}
+
+.obecne-info[class~="x-tree-node-collapsed"] .x-tree-node-icon{
+	/*background-image:url(images/book24.png);*/
+	background-image:url(images/circle-brown.png);
+}
+
+.x-tree-node-leaf .prirucka {
+	/*background-image: url(images/format_text_italic.png) !important;*/
+	background-image:url(images/circle-brown.png);
+}
+
+/*
+.skupina-metodik[class~="x-tree-node-expanded"] .x-tree-node-icon{
+	background-image:url(images/book-open.png);
+}
+
+.skupina-metodik[class~="x-tree-node-collapsed"] .x-tree-node-icon{
+	background-image:url(images/method.png);
+}
+
+.x-tree-node-leaf .metodika {
+  background-image: url(images/plodina.png) !important;
+}
+*/
+
+/* ikony pro vsechny kapitoly*/
+.vsechnyKap[class~="x-tree-node-expanded"] .x-tree-node-icon {
+	background-image:url(images/circle-pie2-brown.png);
+}
+
+.vsechnyKap[class~="x-tree-node-collapsed"] .x-tree-node-icon {
+	background-image:url(images/circle-brown.png);
+}
+
+.vsechnyKap[class~="x-tree-node-leaf"] .x-tree-node-icon {
+	/*background-image:url(images/circle-ring-brown.png);*/
+	background-image:url(images/circle-brown.png);
+}
+
+.nahledMetodikySO .x-tree-node-icon  {
+	background-image:url(images/method.png);
+}
+
+.fy-footer {
+  height: 23px;
+  background-color: ##a8d089;
+}
+
+.hledejTextIOR {
+	padding-top: 10px; 
+	font-size: 14px; 
+	font-weight: bold;
+	text-align: center; 
+	height: 100px; 
+	background: url(images/loader-green.gif) no-repeat center center;
+}
+
+.btn-table-edit {
+  background-image: url(images/table_edit.png) !important;
+}
+
+
+.seznamSO {
+  cursor: pointer;
+}
+
+.seznamSO:hover {
+  color: #00af00;
+}

@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title>Vyhledávání v databázi odrůd ÚKZÚZ</title>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs" />
+    
+    <script>
+      function doSubmit()
+	{
+	    //číslo odrůdy se předá v URL jako první parametr, např. tedy .../odrudy-hledej.html?odr=PRP07850
+	    document.getElementById("odr").value = decodeURIComponent(location.search.split(/[=;]/)[1]);
+	    var fm = document.forms["form1"];
+	    fm.action = "http://nou.ukzuz.cz/ido/index.html";
+	    window.setTimeout(function(){fm.submit();}, 10);
+	}
+    </script>
+</head>
+
+<body class="language-version-cs app-page-r" onload="doSubmit()">
+    <form name="Form1" method="post" id="form1">
+	
+	<input type="hidden" name="id" value="B"/>
+	<input type="hidden" name="lang" value="cz"/>
+	<input type="hidden" name="variety_code" id="odr" />
+	<input type="hidden" name="chb0" value="t"/>
+	<input type="hidden" name="chb1" value="t"/>
+	<input type="hidden" name="chb2" value="t"/>
+	<input type="hidden" name="chb3" value="t"/>
+	<input type="hidden" name="r2" value="1"/>
+    
+    </form>
+    
+    <div style="height: 200px; background: url('images/loader-green.gif') no-repeat center center; text-align: center; margin-top: 100px;">
+	  <b>Probíhá přesměrování do databáze odrůd ÚKZÚZ, čekejte...</b>
+    </div>
+    
+</body>
+
+</html>

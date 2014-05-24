@@ -1,0 +1,123 @@
+<!-- Do NOT put any DOCTYPE here unless you want problems in IEs. -->
+<html>
+ 
+<!-- Each valid html page must have a head; let's create one. -->
+<head>
+  <!-- The following line defines content type and utf-8 as character set. -->
+  <!-- If you want your application to work flawlessly with various local -->
+  <!-- characters, just make ALL strings, on the page, json and database utf-8. -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ 
+  <!-- Ext relies on its default css so include it here. -->
+  <!-- This must come BEFORE javascript includes! -->
+  <!--link rel="stylesheet" type="text/css" href="http://www.extjs.com/deploy/dev/resources/css/ext-all.css"-->
+  <!--link rel="stylesheet" type="text/css" href="../ext-3.4.0/resources/css/ext-all.css"-->
+  <link rel="stylesheet" type="text/css" href="ext-3.4.0/resources/css/ext-all-notheme.css">
+  <link rel="stylesheet" type="text/css" href="ext-3.4.0/resources/css/xtheme-green.css" />
+ 
+  <!-- Include here your own css files if you have them. -->
+  <!--link rel="stylesheet" type="text/css" href="../ext-3.4.0/examples/ux/css/CenterLayout.css"-->
+  <link rel="stylesheet" type="text/css" href="ext-3.4.0/examples/ux/fileuploadfield/css/fileuploadfield.css"></script>
+  <link rel="stylesheet" href="../CodeMirror/lib/codemirror.css">
+  <!--link rel="stylesheet" href="../CodeMirror/theme/jsmalltalk.css"-->
+  <link rel="stylesheet" href="../CodeMirror/theme/default.css">
+  <link rel="stylesheet" type="text/css" href="jst-styles.css">
+  <link rel="stylesheet" type="text/css" href="fytoportal.css">
+ 
+  <!-- First of javascript includes must be an adapter... -->
+  <!--script type="text/javascript" src="http://www.extjs.com/deploy/dev/adapter/ext/ext-base-debug.js"></script-->
+  <script type="text/javascript" src="ext-3.4.0/adapter/ext/ext-base.js"></script>
+ 
+  <!-- ...then you need the Ext itself, either debug or production version. -->
+  <!--script type="text/javascript" src="http://www.extjs.com/deploy/dev/ext-all-debug.js"></script-->
+  <script type="text/javascript" src="ext-3.4.0/ext-all.js"></script>
+ 
+  <!-- Include here your extended classes if you have some. -->
+  <script type="text/javascript" src="ext-3.4.0/examples/ux/CheckColumn.js"></script>
+  <!--script type="text/javascript" src="../ext-3.4.0/examples/ux/CenterLayout.js"></script-->
+  <script type="text/javascript" src="ext-3.4.0/examples/ux/RowExpander.js"></script>
+  <script type="text/javascript" src="ext-3.4.0/examples/ux/fileuploadfield/FileUploadField.js"></script>
+ 
+  <!-- Include here you application javascript file if you have it. -->
+  <script src="../CodeMirror/lib/codemirror.js"></script>
+  <script src="../CodeMirror/mode/javascript/javascript.js"></script>
+  <!--script src="../CodeMirror/mode/smalltalk/smalltalk.js"></script-->
+
+  <script src="codemirror-jsmalltalk.js"></script>
+  
+  <script src="soapclient.js"></script>
+
+  <script type="text/javascript" src="jst-core.js"></script>
+  <script type="text/javascript" src="jst-core-proxy.js"></script>
+  <script type="text/javascript" src="jst-parser.js"></script>
+  <script type="text/javascript" src="jst-collections.js"></script>
+  <script type="text/javascript" src="jst-kernel.js"></script>
+  <script type="text/javascript" src="jst-debug.js"></script>
+  
+  <script type="text/javascript" src="jst-dom.js"></script>
+  <script type="text/javascript" src="jst-dom-html.js"></script>
+  <script type="text/javascript" src="jst-files.js"></script>
+  <script type="text/javascript" src="jst-system.js"></script>
+  <script type="text/javascript" src="jst-couchdb.js"></script>
+  <script type="text/javascript" src="jst-dom-canvas.js"></script>
+  <script type="text/javascript" src="jst-applications.js"></script>
+  <script type="text/javascript" src="jst-codemirror.js"></script>
+  <script type="text/javascript" src="jst-ext-core.js"></script>
+  <script type="text/javascript" src="jst-ext-comp.js"></script>
+  <script type="text/javascript" src="jst-ext-data.js"></script>
+  <script type="text/javascript" src="jst-ext-form.js"></script>
+  <script type="text/javascript" src="jst-ext-grid.js"></script>
+  <script type="text/javascript" src="jst-tools.js"></script>
+  <script type="text/javascript" src="jst-tools-debugger.js"></script>
+
+  <script type="text/javascript" src="fytoportal-core.js"></script>
+  <script type="text/javascript" src="fytoportal-foto.js"></script>
+  <script type="text/javascript" src="fytoportal-ior.js"></script>
+  <script type="text/javascript" src="fytoportal-foto-edit.js"></script>
+  <script type="text/javascript" src="fytoportal-ior-edit.js"></script>
+  <script type="text/javascript" src="fytoportal.js"></script>
+
+  <script type="text/javascript" src="jst-srs-ppp.js"></script>
+ 
+  <!--script type="text/javascript" src="/_utils/script/sha1.js"></script>
+  <script type="text/javascript" src="/_utils/script/jquery.js"></script>
+  <script type="text/javascript" src="/_utils/script/jquery.couch.js"></script-->
+
+  <!-- Set a title for the page (id is not necessary). -->
+  <title id="page-title">Rostlinolékařský portál</title>
+ 
+  <!-- You can have onReady function here or in your application file. -->
+  <!-- If you have it in your application file delete the whole -->
+  <!-- following script tag as we must have only one onReady. -->
+  <script type="text/javascript">
+ 
+  // Path to the blank image must point to a valid location on your server
+  Ext.BLANK_IMAGE_URL = 'ext-3.4.0/resources/images/default/s.gif';
+ 
+  // Main application entry point
+  Ext.onReady(function() {
+    //Ext.History.init();
+    jst.ChangeSet.current().temporary_(true); //persistent storage nechce fungovat :-/
+    jst.JSmalltalkIDE.prefix_('fy');
+    jst.JSmalltalkIDE.beforeShow_(function(){
+      jst.FYDesktop.start();});
+    jst.JSmalltalkIDE.start();
+  });
+  </script>
+ 
+<!-- Close the head -->  
+</head>
+ 
+<!-- You can leave the body empty in many cases, or you write your content in it. -->
+<body>
+
+<!-- Fields required for history management
+<form id="history-form" class="x-hidden">
+    <input type="hidden" id="x-history-field" />
+    <iframe id="x-history-frame"></iframe>
+</form -->
+
+</body>
+ 
+<!-- Close html tag at last -->
+</html>​

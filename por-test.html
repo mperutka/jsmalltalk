@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <title>TEST - Vyhledávání v registru přípravků</title>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs" />
+    <!--meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" /-->
+    
+    <script>
+      function doSubmit()
+	{
+	    document.getElementById("obchjm").value = decodeURIComponent(location.search.split(/[=;]/)[1]);
+	    //document.getElementById("stav").value = "X";
+	    //document.getElementById("akce").value = "Vyhledat";
+	    document.forms["form1"].action = "http://eagri.cz/public/app/eagriapp/POR/Vyhledavani.aspx?type=0&vyhledat=A&stamp=" + new Date().getTime();
+	    window.setTimeout(function(){document.forms["form1"].submit();}, 10);
+	}
+    </script>
+</head>
+
+<body class="language-version-cs app-page-r" onload="doSubmit()">
+    <form name="Form1" method="post" action="http://eagri.cz/public/app/eagriapp/POR/Vyhledavani.aspx?type=0" id="form1">
+	
+	<input type="hidden" name="ctl00$ContentPlaceHolder1$tbPripravek" id="obchjm"/>
+	<input type="hidden" name="ctl00$ContentPlaceHolder1$tbRegCislo"/>
+	<input type="hidden" name="ctl00$ContentPlaceHolder1$tbDrzitelRozhodnuti"/>
+	<input type="hidden" name="ctl00$ContentPlaceHolder1$tbSO"/>
+	<input type="hidden" name="ctl00$ContentPlaceHolder1$tbPlodina"/>
+	<input type="hidden" name="ctl00$ContentPlaceHolder1$ddSkupinaPlodin" value="%"/>
+	<input type="hidden" name="ctl00$ContentPlaceHolder1$hdUdaje"/>
+	<input type="hidden" name="ctl00$ContentPlaceHolder1$hdUdajeVyber"/>
+	<input type="hidden" name="filtrUdaje" value="0">
+	<input type="hidden" name="ctl00$ContentPlaceHolder1$ddAktStav" value="X"/>
+	
+	<input type="hidden" name="ctl00$ContentPlaceHolder1$ddMoreni" value="%"/>
+	<input type="hidden" name="ctl00$ContentPlaceHolder1$ddBiologickaFunkce" value="%"/>
+	<input type="hidden" name="ctl00$ContentPlaceHolder1$tbUcinnaLatka"/>
+	<input type="hidden" name="ctl00$ContentPlaceHolder1$ddDovoz" value="%"/>
+	<input type="hidden" name="ctl00$ContentPlaceHolder1$ddEKO" value="%"/>
+	<input type="hidden" name="ctl00$ContentPlaceHolder1$ddDruhBaleni" value="%"/>
+	<input type="hidden" name="ctl00$ContentPlaceHolder1$ddLA" value="%"/>
+	<input type="hidden" name="ctl00$ContentPlaceHolder1$ddStatusRegistrace" value="%"/>
+	<input type="hidden" name="ctl00$ContentPlaceHolder1$ddIPReva" value="%"/>
+	<input type="hidden" name="ctl00$ContentPlaceHolder1$ddIPStromy" value="%"/>
+	<input type="hidden" name="ctl00$ContentPlaceHolder1$ddIPZelenina" value="%"/>
+	
+	<input type="hidden" name="ctl00$ContentPlaceHolder1$tbDatUcinkyRozhodnutiOd"/>
+	<input type="hidden" name="ctl00$ContentPlaceHolder1$tbDatUcinkyRozhodnutiDo"/>
+	<input type="hidden" name="ctl00$ContentPlaceHolder1$tbDatPlatnostRozhodnutiOd"/>
+	<input type="hidden" name="ctl00$ContentPlaceHolder1$tbDatPlatnostRozhodnutiDo"/>
+	<input type="hidden" name="ctl00$ContentPlaceHolder1$tbDatUvadeniTrhDoOd"/>
+	<input type="hidden" name="ctl00$ContentPlaceHolder1$tbDatUvadeniTrhDoDo"/>
+	<input type="hidden" name="ctl00$ContentPlaceHolder1$tbDatPouzivaniDoOd"/>
+	<input type="hidden" name="ctl00$ContentPlaceHolder1$tbDatPouzivaniDoDo"/>
+	
+	<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" >
+	<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+    
+	<!--input type="submit" name="ctl00$ContentPlaceHolder1$btVyhledat" value="Vyhledat" style="display: auto" id="akce" /-->
+	<input type="hidden" name="ctl00$ContentPlaceHolder1$btVyhledat" value="Vyhledat" id="akce" />
+    
+    </form>
+    
+    <div style="height: 200px; background: url('images/loader-flower-blue.gif') no-repeat center center; text-align: center; margin-top: 100px;">
+	  <b>Probíhá přesměrování do Registru přípravků, čekejte...</b>
+	  <!--img src="images/loader-flower-blue.gif" style="text-align: center;" /-->
+    </div>
+</body>
+
+</html>

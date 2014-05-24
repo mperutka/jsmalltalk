@@ -1,0 +1,129 @@
+<!-- Do NOT put any DOCTYPE here unless you want problems in IEs. -->
+<html>
+ 
+<!-- Each valid html page must have a head; let's create one. -->
+<head>
+  <!-- The following line defines content type and utf-8 as character set. -->
+  <!-- If you want your application to work flawlessly with various local -->
+  <!-- characters, just make ALL strings, on the page, json and database utf-8. -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ 
+  <!-- Ext relies on its default css so include it here. -->
+  <!-- This must come BEFORE javascript includes! -->
+  <!--link rel="stylesheet" type="text/css" href="http://www.extjs.com/deploy/dev/resources/css/ext-all.css"-->
+  <link rel="stylesheet" type="text/css" href="ext-3.4.0/resources/css/ext-all.css">
+ 
+  <!-- Include here your own css files if you have them. -->
+ 
+  <!-- First of javascript includes must be an adapter... -->
+  <!--script type="text/javascript" src="http://www.extjs.com/deploy/dev/adapter/ext/ext-base-debug.js"></script-->
+  <script type="text/javascript" src="ext-3.4.0/adapter/ext/ext-base.js"></script>
+ 
+  <!-- ...then you need the Ext itself, either debug or production version. -->
+  <!--script type="text/javascript" src="http://www.extjs.com/deploy/dev/ext-all-debug.js"></script-->
+  <script type="text/javascript" src="ext-3.4.0/ext-all.js"></script>
+ 
+  <!-- Include here your extended classes if you have some. -->
+ 
+  <!-- Include here you application javascript file if you have it. -->
+  <script src="CodeMirror/lib/codemirror.js"></script>
+  <link rel="stylesheet" href="CodeMirror/lib/codemirror.css">
+  <script src="CodeMirror/mode/javascript/javascript.js"></script>
+  <link rel="stylesheet" href="CodeMirror/theme/default.css">
+
+  <link rel="stylesheet" type="text/css" href="jst-styles.css">
+  <script src="codemirror-jsmalltalk.js"></script>
+
+  <script type="text/javascript" src="jst-core.js"></script>
+  <script type="text/javascript" src="jst-core-proxy.js"></script>
+  <script type="text/javascript" src="jst-parser.js"></script>
+  <script type="text/javascript" src="jst-collections.js"></script>  
+  <script type="text/javascript" src="jst-kernel.js"></script>
+  <script type="text/javascript" src="jst-debug.js"></script>
+
+  <script type="text/javascript" src="jst-dom.js"></script>
+  <script type="text/javascript" src="jst-dom-html.js"></script>
+  <script type="text/javascript" src="jst-dom-canvas.js"></script>
+  <script type="text/javascript" src="jst-files.js"></script>
+  <script type="text/javascript" src="jst-system.js"></script>
+  <script type="text/javascript" src="jst-couchdb.js"></script>
+  <script type="text/javascript" src="jst-dom-canvas.js"></script>
+  <script type="text/javascript" src="jst-applications.js"></script>
+  <script type="text/javascript" src="jst-codemirror.js"></script>
+  <script type="text/javascript" src="jst-ext-core.js"></script>
+  <script type="text/javascript" src="jst-ext-comp.js"></script>
+  <script type="text/javascript" src="jst-ext-data.js"></script>
+  <script type="text/javascript" src="jst-ext-form.js"></script>
+  <script type="text/javascript" src="jst-ext-grid.js"></script>
+  <script type="text/javascript" src="jst-tools.js"></script>
+  <script type="text/javascript" src="jst-tools-debugger.js"></script>
+ 
+  <!-- Set a title for the page (id is not necessary). -->
+  <title id="page-title">JSmalltalk IDE</title>
+ 
+  <!-- You can have onReady function here or in your application file. -->
+  <!-- If you have it in your application file delete the whole -->
+  <!-- following script tag as we must have only one onReady. -->
+  <script type="text/javascript">
+ 
+  // Path to the blank image must point to a valid location on your server
+  Ext.BLANK_IMAGE_URL = 'ext-3.4.0/resources/images/default/s.gif';
+ 
+  // Main application entry point
+  Ext.onReady(function() {
+    jst.ChangeSet.current().temporary_(true); //persistent storage nechce fungovat :-/
+    jst.JSmalltalkIDE.start();
+    jst.JSmalltalkIDE.welcome();
+  });
+  </script>
+ 
+</head>
+ 
+<!-- You can leave the body empty in many cases, or you write your content in it. -->
+<body bgcolor="#C7C7C7">
+
+<div id="welcome" class="xx-hidden">
+<b>JSmalltalk</b> je impementace jazyka Smalltalk-80 v Javascriptu.
+Funkčně se snaží být JSmalltalk co nejvíce podobný prostředí <a
+href="http://www.squeak.org/" target="_blank">Squeak</a>. JSmalltalk
+je publikován pod licencí <a href="http://www.gnu.org/licenses/gpl"
+target="_blank">GNU GPL</a>.<br>
+<br>
+Integrované vývojové prostředí (IDE)
+JSmalltalku běží v prostředí prohlížeče a je postaveno na frameworku <a
+href="http://www.sencha.com/products/extjs3" target="_blank">Ext JS
+(verze 3)</a>. Dále využívá skvělý editor <a
+href="http://codemirror.net/" target="_blank">CodeMirror</a>.
+IDE zahrnuje <span style="font-style: italic;">class browser</span>, <span
+style="font-style: italic;">workspace</span>, <span
+style="font-style: italic;">message names</span>, <span
+style="font-style: italic;">changes viewer</span>, <span
+style="font-style: italic;">object inspector</span> a <span
+style="font-style: italic;">debugger</span>, <span
+style="font-style: italic;">workspace</span> zatím chybí (lze ale
+využít javascriptovou konzoli pomocí
+příkazu Console&gt;&gt;log:).<br>
+<br>
+První verze vznikla v roce 2010, v roce 2011 došlo k
+zásadnímu přepracování systému tříd a metatříd (viz jst-core.js).
+Velkou inspirací pro JSmalltalk
+byl obdobný projekt <a href="http://amber-lang.net/" target="_blank">Amber</a>
+Smalltalk, zejména řešení posílání zpráv, implementace thisContext a
+"objev" editoru CodeMirror.<br>
+<br>
+JSmalltalk je vyvíjen v Google Chrome, kde funguje nejlépe (a
+nejrychleji) včetně ukládání provedených změn pomocí lokálního <a
+href="http://www.w3.org/TR/file-system-api/" target="_blank">File
+System API.</a> Ještě je testován ve Firefoxu, kde je v podstatě
+funkční (ovšem pomalejší než v Chrome a zatím stále bez File API). Na rychlost má
+značný vliv zapnutí/vypnutí ladícího módu
+(přítomnost/nepřítomnost souborů jst-debug.js a jst-tools-debugger.js).
+V ladícím módu se vytvářejí kontexty metod a bloků, což přináší
+zpomalení a vyšší nároky na paměť.<br>
+<br>
+Kontakt na autora programu: <a href="mailto:michal.perutka@gmail.com">michal.perutka@gmail.com</a><br>
+</div>
+
+</body>
+ 
+</html>​

@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title>Vyhledávání v registru přípravků</title>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs" />
+    
+    <script>
+      function doSubmit()
+	{
+	    //jméno přípravku se předá v URL jako první parametr, např. tedy .../por-hledej.html?prip=Acrobat
+	    document.getElementById("obchjm").value = decodeURIComponent(location.search.split(/[=;]/)[1]);
+	    var fm = document.forms["form1"];
+	    fm.action = "http://eagri.cz/public/app/eagriapp/POR/Vyhledavani.aspx?type=0&vyhledat=A&stamp=" + new Date().getTime();
+	    window.setTimeout(function(){fm.submit();}, 10);
+	}
+    </script>
+</head>
+
+<body class="language-version-cs app-page-r" onload="doSubmit()">
+    <form name="Form1" method="post" id="form1">
+	
+	<input type="hidden" name="ctl00$ContentPlaceHolder1$tbPripravek" id="obchjm"/>
+	<input type="hidden" name="ctl00$ContentPlaceHolder1$ddAktStav" value="X"/>
+	
+	<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+	<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+    
+	<input type="hidden" name="ctl00$ContentPlaceHolder1$btVyhledat" value="Vyhledat" />
+    
+    </form>
+    
+    <div style="height: 200px; background: url('images/loader-green.gif') no-repeat center center; text-align: center; margin-top: 100px;">
+	  <b>Probíhá přesměrování do Registru přípravků, čekejte...</b>
+    </div>
+    
+</body>
+
+</html>

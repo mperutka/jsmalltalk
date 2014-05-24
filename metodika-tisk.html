@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Tisk metodiky IOR</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs" />
+
+    <link rel="stylesheet" type="text/css" href="metodika-tisk.css">
+
+    <script>
+	Ext = {
+		EventObject: {},
+		MessageBox: {},
+		TaskMgr: {},
+		ComponentMgr: {},
+		QuickTips: {},
+		WindowMgr: {},
+		Window: {getState: function(){}},
+		Ajax: {},
+		util: {
+			JSON: {},
+			Format: {}
+		},
+		state: {
+			Manager: {}
+		},
+		data: {
+			Types: {DATE: {}}
+		}
+	};
+	function printIOR(){
+		var tisk = jst.FYTiskMetodiky._new();
+		jst.HTMLElement.wrap_(document.body).htmlContents_(
+			function(html){tisk.renderTiskMetodikyOn_(html);});
+		document.body.removeChild(document.getElementById("loader"));
+		window.print();
+	};
+	function onLoad() {
+		var urlParams = jst.Browser.location().asUrl().parameters();
+		//jst.Fytoportal.state().at_put_("vyberKapitolPM", jst.JSON.__default().decode_(decodeURIComponent(urlParams.at_("vyber"))));
+		var m = jst.Fytoportal.db().loadObject_(urlParams.at_("metodika"));
+		document.title = m.nazev() + " - tisk metodiky IOR";
+		jst.Fytoportal.navigator().ior().metodika().link_(m);
+		printIOR.delayed_(100);
+	};
+
+    </script>
+
+    <script type="text/javascript" src="jst-core-IE.js"></script>
+    <script type="text/javascript" src="jst-core-proxy.js"></script>
+    <script type="text/javascript" src="fytoportal-rtm.js"></script>
+        
+</head>
+
+<body onload="onLoad()">
+    
+    <div id="loader" style="height: 100px; background: url('images/loader-flower-blue.gif') no-repeat center center; text-align: center; margin-top: 50px;">
+	  <b>Tisk metodiky se připravuje, čekejte...</b>
+    </div>
+    
+</body>
+
+</html>

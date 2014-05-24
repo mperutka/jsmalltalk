@@ -1,0 +1,166 @@
+/*
+ * Copyright (c) 2012 Michal Perutka <michal.perutka@gmail.com>
+ * 
+ * This file is part of JSmalltalk, an implementation of the Smalltalk language 
+ * that runs on top of the JavaScript runtime.
+ * 
+ * JSmalltalk is free software: you can redistribute it and/or modify it under the terms 
+ * of the GNU General Public License as published by the Free Software Foundation, 
+ * either version 3 of the License, or (at your option) any later version.
+ *
+ * JSmalltalk is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
+ * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
+ * See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with JSmalltalk. 
+ * If not, see <http://www.gnu.org/licenses/>.
+ * --------------------------------------------------------------------------------------
+ */
+
+pre {font-family: courier !important; font-size: 120%}
+pre .selector {color: blue;}
+pre .param {color: blue; font-style: italic;}
+pre .method-heading .selector {font-weight: bold; color: black;}
+textarea.editing {border: 1px solid #FF0000;}
+
+.editing form, .editing .x-panel-body {border: 1px solid #FF0000;}
+.jst-highlight {background-color: yellow !important;}
+
+.package {
+  background-image: url(images/package.png) !important;
+}
+.category {
+  background-image: url(images/category.png) !important;
+}
+.method {
+  background-image: url(images/method.png) !important;
+}
+.jst-class {
+  background-image: url(images/class.png) !important;
+}
+.symbol {
+  background-image: url(images/symbol.png) !important;
+}
+.javascript {
+  background-image: url(images/javascript.png) !important;
+}
+.lightbulb {
+  background-image: url(images/lightbulb.png) !important;
+}
+.tree {
+  background-image: url(images/tree.png) !important;
+}
+
+.btn-save {
+  background-image: url(images/save16.png) !important;
+}
+.btn-cancel {
+  background-image: url(images/cancel.png) !important;
+}
+.btn-confirm {
+  background-image: url(images/check.png) !important;
+}
+.btn-delete {
+  background-image: url(images/trash.png) !important;
+}
+.btn-help {
+  background-image: url(images/help.png) !important;
+}
+.btn-add {
+  background-image: url(images/plus.png) !important;
+}
+.btn-print {
+  background-image: url(images/print.png) !important;
+}
+.info16 {
+  background-image: url(images/info16.png) !important;
+}
+.info32 {
+  background-image: url(images/info32.png) !important;
+}
+
+.mbox-loading {
+  background-image: url(images/loader-green.gif);
+  width: 32px !important;
+}
+
+.CodeMirror {
+  line-height: 130% !important;
+  font-family: monospace;
+  font-size: 105%
+}
+.CodeMirror-scroll {
+  /*overflow: visible;
+  height: auto;*/
+  height: 100%;
+}
+
+/* CodeMirror JSmalltalk theme */
+.cm-s-jst span.cm-keyword {color: #7F0000; font-weight: bold;}
+.cm-s-jst span.cm-className {font-weight: bold;}
+.cm-s-jst span.cm-assignment {font-weight: bold;}
+.cm-s-jst span.cm-return {font-weight: bold;}
+.cm-s-jst span.cm-atom {color: #219;}
+.cm-s-jst span.cm-number {color: #7F0000;}
+.cm-s-jst span.cm-def {color: #00f;}
+.cm-s-jst span.cm-variable {color: grey;}
+.cm-s-jst span.cm-variable-2 {color: #05a;}
+.cm-s-jst span.cm-variable-3 {color: #0a5;}
+.cm-s-jst span.cm-property {color: black;}
+.cm-s-jst span.cm-operator {color: #00007F;}
+.cm-s-jst span.cm-comment {color: #007F00;}
+.cm-s-jst span.cm-string {color: #7F007F;}
+.cm-s-jst span.cm-meta {color: #555;}
+.cm-s-jst span.cm-error {color: #f00;}
+.cm-s-jst span.cm-qualifier {color: #555;}
+.cm-s-jst span.cm-builtin {color: #30a;}
+.cm-s-jst span.cm-bracket {color: #cc7;}
+.cm-s-jst span.cm-tag {color: #170;}
+.cm-s-jst span.cm-attribute {color: #00c;}
+
+.x-tab-panel-no-header {
+    border-top: 1px solid;
+    border-color:#8db2e3;
+}
+
+.x-tab-panel-no-header .x-tab-panel-header {
+    display: none;
+}
+
+.msg .x-box-mc {
+    font-size:14px;
+}
+#msg-div {
+    position:absolute;
+    top:10px;
+    width:250px;
+    z-index:20000;
+}
+
+.html-editor-btn button {
+  background-image: none !important;
+}
+
+.jst-code-error, .text-diff-added {
+  color: red !important;
+}
+.text-diff-deleted {
+  color: gray !important; text-decoration: line-through !important;
+}
+
+.jst-filter-desc {
+  font-weight: normal;
+  color: black;
+}
+
+.jst-filter-char {
+  font-weight: bold;
+}
+
+.comp-inspect {
+  cursor: pointer;
+}
+
+.comp-inspect:hover {
+  color: red;
+}

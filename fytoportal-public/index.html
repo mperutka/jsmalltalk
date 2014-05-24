@@ -1,0 +1,74 @@
+<!-- 19.5.2014 23:43:19 -->
+
+<!DOCTYPE html>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+ 
+<html>
+ 
+<!-- Each valid html page must have a head; let's create one. -->
+<head>
+  <!-- The following line defines content type and utf-8 as character set. -->
+  <!-- If you want your application to work flawlessly with various local -->
+  <!-- characters, just make ALL strings, on the page, json and database utf-8. -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ 
+  <!-- Ext relies on its default css so include it here. -->
+  <!-- This must come BEFORE javascript includes! -->
+  <!--link rel="stylesheet" type="text/css" href="ext-3.4.0/resources/css/ext-all.css"-->
+  <link rel="stylesheet" type="text/css" href="ext-3.4.0/resources/css/ext-all-notheme.css">
+  <link rel="stylesheet" type="text/css" href="ext-3.4.0/resources/css/xtheme-green.css" />
+
+  <!-- Include here your own css files if you have them. -->
+  <link rel="stylesheet" type="text/css" href="ext-3.4.0/examples/ux/fileuploadfield/css/fileuploadfield.css"></script>
+  <link rel="stylesheet" type="text/css" href="jst-styles.css">
+  <link rel="stylesheet" type="text/css" href="fytoportal.css">
+ 
+  <!-- First of javascript includes must be an adapter... -->
+  <script type="text/javascript" src="ext-3.4.0/adapter/ext/ext-base.js"></script>
+  
+  <!-- ...then you need the Ext itself, either debug or production version. -->
+  <script type="text/javascript" src="ext-3.4.0/ext-all.js"></script>
+
+  <!-- Include here your extended classes if you have some. -->
+  <script type="text/javascript" src="ext-3.4.0/examples/ux/CheckColumn.js"></script>
+  <script type="text/javascript" src="ext-3.4.0/examples/ux/RowExpander.js"></script>
+  <script type="text/javascript" src="ext-3.4.0/examples/ux/fileuploadfield/FileUploadField.js"></script>
+ 
+  <!-- Include here you application javascript file if you have it. -->
+  <script type="text/javascript" src="jst-core-IE.js"></script>
+  <script type="text/javascript" src="jst-core-proxy.js"></script>
+  <script type="text/javascript" src="fytoportal-rtm.js"></script>
+
+  <!-- Set a title for the page (id is not necessary). -->
+  <title id="page-title">Rostlinolékařský portál</title>
+ 
+  <!-- You can have onReady function here or in your application file. -->
+  <!-- If you have it in your application file delete the whole -->
+  <!-- following script tag as we must have only one onReady. -->
+  <script type="text/javascript">
+ 
+  // Path to the blank image must point to a valid location on your server
+  Ext.BLANK_IMAGE_URL = 'ext-3.4.0/resources/images/default/s.gif';
+ 
+  // Main application entry point
+  Ext.onReady(function() {
+	if (Ext.isIE6 || Ext.isIE7 || Ext.isIE8) {
+		var h = document.createElement("h1");
+		document.body.appendChild(h);
+		h.appendChild(document.createTextNode('Omlouváme se - "' + document.title + '" nelze spustit, protože používáte zastaralý prohlížeč!'));
+		document.body.appendChild(h = document.createElement("h2"));
+		h.appendChild(document.createTextNode('Doporučujeme používat aktuální verzi prohlížeče Google Chrome nebo Mozilla Firefox. Pokud chcete i nadále používat Internet Explorer, budete potřebovat alespoň verzi 9 (tj. musíte přejít na Windows 7 nebo vyšší).'));
+	} else
+		jst.FYDesktop.start();
+  });
+  </script>
+ 
+<!-- Close the head -->  
+</head>
+ 
+<!-- You can leave the body empty in many cases, or you write your content in it. -->
+<body>
+
+</body>
+
+</html>​

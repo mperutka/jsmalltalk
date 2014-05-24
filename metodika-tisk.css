@@ -1,0 +1,204 @@
+
+.metodika-nazev {
+  font-size: 24px;
+  font-weight: bold;
+  padding-bottom: 10px;  
+}
+
+.kapitola .obsah {
+  font-size: 12px;
+  padding-bottom: 7px;
+  page-break-before: avoid;
+}
+
+.Apple-tab-span {
+  margin-left: 25px;
+  white-space: normal !important;
+}
+
+.kapitola .obsah ul, .kapitola .obsah ol {
+  margin: 0px;
+  padding: 0px 0px 5px 25px;
+}
+
+.kapitola .obsah ul li {
+  list-style: disc outside none;
+}
+
+.kapitola .obsah ol li {
+  list-style: decimal outside none;
+}
+
+.kapitola .obsah br {
+  line-height: 4px;
+}
+
+.nazev1 {
+  font-size: 21px;
+  font-weight: bold;
+  padding-bottom: 5px;
+  clear: right;
+  page-break-after: avoid;
+}
+
+.kapitola .nazev2 {
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 3px;
+  page-break-after: avoid;
+}
+
+.kapitola .nazev3 {
+  font-size: 15px;
+  font-weight: bold;
+  padding-bottom: 3px;
+  page-break-after: avoid;
+}
+
+.kapitola .nazev4 {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding-bottom: 3px;
+  page-break-after: avoid;
+}
+
+.kapitola-taxon {
+  margin-bottom: 10px;
+  clear: right;
+}
+
+.kapitola-taxon .nazev1 {
+  clear: none;
+}
+
+.kapitola-taxon p {
+  font-size: 12px;
+  margin: 0 0 4px;
+}
+
+.kapitola-taxon p strong {
+  font-weight: bold;
+}
+
+.taxon-nazev {
+  padding-bottom: 5px;
+}
+
+.taxon-popis {
+  padding-bottom: 7px;
+  page-break-inside: avoid;
+}
+
+.taxon-nazev .cesky {
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.latinsky {
+  font-style: italic;
+}
+
+.taxon-nazev .latinsky {
+  font-size: 16px;
+}
+
+.kapitola-taxon .nazev1 {
+  font-size: 17px;
+}
+
+.kapitola-taxon .nazev2 {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.kapitola-taxon .nazev3 {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.kapitola-taxon .nazev4 {
+  font-size: 12px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.kapitola-taxon .fotka {
+    float: right;
+    margin: 5px 5px 10px 10px;
+    overflow: hidden;
+    page-break-inside: avoid;
+}
+
+.semafor {
+    border-collapse:collapse;
+    border: 1px solid black;
+    margin-top: 3px;
+    margin-bottom: 7px;
+}
+
+.semafor th {
+    text-align: left;
+}
+
+.semafor th, .semafor td {
+    vertical-align: top;
+    padding: 2px;
+    border: 1px solid black;
+}
+
+.semafor .udaj {
+    text-align: center;
+}
+
+table.taxony {
+    border-collapse:collapse;
+    border: 1px solid black;
+    margin-top: 3px;
+    margin-bottom: 7px;
+}
+
+table.taxony, table.taxony .cesky, table.taxony p {
+    font-size: 12px;
+}
+
+table.taxony th, table.taxony td {
+    vertical-align: top;
+    padding: 2px;
+    border: 1px solid black;
+}
+
+table.taxony th {
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+table.tab-text {
+    border-collapse:collapse;
+    border: 0px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    margin: 5px 0px;
+    font-size: 12px !important;
+}
+
+table.tab-text th, table.tab-text td {
+    vertical-align: top;
+    padding: 2px;
+    border: 0px;
+}
+
+table.tab-text th {
+    font-weight: bold;
+    text-align: left;
+    /*white-space: nowrap;*/
+}
+
+table.tab-text .tab-head {
+  border-bottom: 1px solid gray;
+}
+
+table.tab-text .even {
+  background-color: #EFEFEF;
+}
